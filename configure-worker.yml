@@ -3,6 +3,9 @@
   strategy: debug
 #  connection: ssh
   tasks:
+     - name: set timezone to Europe/Kiev
+       timezone:
+         name: Europe/Kiev
      - name: Install docker
        apt:
          name: docker
