@@ -36,11 +36,13 @@
        group:
          name: docker
          state: present
+       become: True
      - name: Add the user mkorneyc to docker group
        user:
          name: mkorneyc
          groups: docker
          append: yes
+       become: True
 #     - name: Update usergroup settings
 #       command: newgrp docker
 #    - name: groupadd docker
