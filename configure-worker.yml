@@ -12,8 +12,8 @@
          name: mkorneyc
          groups: docker
          append: yes
-     - name: Update usergroup settings
-       command: newgrp docker
+#     - name: Update usergroup settings
+#       command: newgrp docker
 #    - name: groupadd docker
 #      command: groupadd docker
 #      ignore_errors: True
