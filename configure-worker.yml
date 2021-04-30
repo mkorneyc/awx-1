@@ -12,6 +12,8 @@
          name: mkorneyc
          groups: docker
          append: yes
+     - name: Update usergroup settings
+       command: newgrp docker
 #    - name: groupadd docker
 #      command: groupadd docker
 #      ignore_errors: True
@@ -26,8 +28,6 @@
 #      ignore_errors: True
 #      become: True
 #      register: mymotd
-    - name: update usergroup settings
-      command: newgrp docker
 #      ignore_errors: True
       
       
