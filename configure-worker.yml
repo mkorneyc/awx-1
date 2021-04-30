@@ -13,7 +13,7 @@
 #      sudo: True
       ignore_errors: True
       become: True
-#      register: mymotd
+      register: mymotd
     - name: newgrp docker
       command: newgrp docker
       ignore_errors: True
@@ -26,7 +26,7 @@
 #    - name: return motd to registered var
 #      command: cat /etc/mc/sfs.ini
 #      register: mymotd
-#    - name: return value
-#      debug:
-#        msg: "The password is {{ mymotd }}"
+    - name: return value
+      debug:
+        msg: "The password is {{ mymotd }}"
 
