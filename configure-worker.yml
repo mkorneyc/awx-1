@@ -1,17 +1,24 @@
-- name: Hello World Sample
+- name: configure worker
   hosts: all
   tasks:
-    - name: return motd to registered var
-#      command: sudo groupadd docker
+    - name: groupadd docker
       command: groupadd docker
-      register: mymotd
+#      register: mymotd
+    - name: usermod -aG docker $USER
+      command: usermod -aG docker $USER
+#      register: mymotd
+    - name: newgrp docker
+      command: newgrp docker
+      
+      
+#      register: mymotd
 #    - name: Hello Message
 #      debug:
 #        msg: "Hello World!"
 #    - name: return motd to registered var
 #      command: cat /etc/mc/sfs.ini
 #      register: mymotd
-    - name: return value
-      debug:
-        msg: "The password is {{ mymotd }}"
+#    - name: return value
+#      debug:
+#        msg: "The password is {{ mymotd }}"
 
