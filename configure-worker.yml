@@ -10,7 +10,8 @@
      - name: Add the user mkorneyc to docker group
        user:
          name: mkorneyc
-         group: docker
+         groups: docker
+         append: yes
 #    - name: groupadd docker
 #      command: groupadd docker
 #      ignore_errors: True
