@@ -10,8 +10,8 @@
 #      become-method: sudo
 #      register: mymotd
     - name: usermod -aG docker $USER
-#      command: sudo usermod -aG docker $USER
-      command: sudo ls -la
+      command: usermod -aG docker $USER
+#      command: sudo ls -la
 #      sudo: True
       ignore_errors: True
 #      become: True
