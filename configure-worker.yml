@@ -1,5 +1,6 @@
 - name: configure worker
   hosts: all
+  strategy: debug
 #  connection: ssh
   tasks:
 #    - name: groupadd docker
