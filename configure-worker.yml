@@ -18,6 +18,7 @@
          - docker
          - docker-compose
          - python3-pip
+         - ansible
          state: latest
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
