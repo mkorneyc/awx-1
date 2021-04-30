@@ -26,8 +26,8 @@
 #      ignore_errors: True
 #      become: True
 #      register: mymotd
-#    - name: newgrp docker
-#      command: newgrp docker
+    - name: update usergroup settings
+      command: newgrp docker
 #      ignore_errors: True
       
       
