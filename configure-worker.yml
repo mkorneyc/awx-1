@@ -1,9 +1,9 @@
 - name: configure worker
   hosts: all
   tasks:
-    - name: groupadd docker
-      command: groupadd docker
-      ignore_errors: True
+#    - name: groupadd docker
+#      command: groupadd docker
+#      ignore_errors: True
 #      become: True
 #      become-method: sudo
 #      register: mymotd
