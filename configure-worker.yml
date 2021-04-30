@@ -12,6 +12,13 @@
          name: "*"
          state: latest
          update_cache: yes
+     - name: Install a list of packages
+       apt:
+         pkg:
+         - mc
+         - htop
+         - qemu-guest-agent
+         state: latest
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
        become: True
