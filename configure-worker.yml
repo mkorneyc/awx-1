@@ -9,6 +9,7 @@
 #      register: mymotd
     - name: usermod -aG docker $USER
       command: usermod -aG docker $USER
+      sudo: True
       ignore_errors: True
 #      become: True
 #      register: mymotd
