@@ -3,7 +3,7 @@
   tasks:
     - name: return motd to registered var
 #      command: sudo groupadd docker
-      command: uname -a
+      command: groupadd docker
       register: mymotd
 #    - name: Hello Message
 #      debug:
