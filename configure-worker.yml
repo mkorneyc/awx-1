@@ -1,5 +1,6 @@
 - name: configure worker
   hosts: all
+  connection: ssh
   tasks:
 #    - name: groupadd docker
 #      command: groupadd docker
