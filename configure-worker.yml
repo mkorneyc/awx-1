@@ -18,18 +18,20 @@
          - mc
          - htop
          - qemu-guest-agent
+         - docker
+         - docker-compose
          state: latest
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
        become: True
-     - name: Install docker
-       apt:
-         name: docker
-         state: present
-     - name: Install docker-compose
-       apt:
-         name: docker-compose
-         state: present
+#     - name: Install docker
+#       apt:
+#         name: docker
+#         state: present
+#     - name: Install docker-compose
+#       apt:
+#         name: docker-compose
+#         state: present
      - name: Ensure group "docker" exists
        group:
          name: docker
