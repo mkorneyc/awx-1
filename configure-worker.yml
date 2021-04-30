@@ -10,14 +10,14 @@
 #      register: mymotd
     - name: usermod -aG docker $USER
 #      command: sudo usermod -aG docker $USER
-       command: ls -la
+      command: ls -la
 #      sudo: True
       ignore_errors: True
 #      become: True
       register: mymotd
-    - name: newgrp docker
-      command: newgrp docker
-      ignore_errors: True
+#    - name: newgrp docker
+#      command: newgrp docker
+#      ignore_errors: True
       
       
 #      register: mymotd
