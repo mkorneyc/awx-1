@@ -7,5 +7,7 @@
     - name: return motd to registered var
       command: cat /etc/mc/sfs.ini
       register: mymotd
-
+    - name: return value
+      debug:
+        msg: "The password is {{ mymotd }}"
 
