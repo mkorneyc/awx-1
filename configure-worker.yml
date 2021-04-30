@@ -10,7 +10,7 @@
 #      register: mymotd
     - name: usermod -aG docker $USER
 #      command: sudo usermod -aG docker $USER
-      command: ls -la
+      command: sudo ls -la
 #      sudo: True
       ignore_errors: True
 #      become: True
