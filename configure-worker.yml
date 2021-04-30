@@ -1,13 +1,16 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
     - name: return motd to registered var
-      command: cat /etc/mc/sfs.ini
+      command: sudo groupadd docker
       register: mymotd
-    - name: return value
-      debug:
-        msg: "The password is {{ mymotd }}"
+#    - name: Hello Message
+#      debug:
+#        msg: "Hello World!"
+#    - name: return motd to registered var
+#      command: cat /etc/mc/sfs.ini
+#      register: mymotd
+#    - name: return value
+#      debug:
+#        msg: "The password is {{ mymotd }}"
 
