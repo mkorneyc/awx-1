@@ -7,6 +7,10 @@
        group:
          name: docker
          state: present
+     - name: Add the user mkorneyc to docker group
+       user:
+         name: mkorneyc
+         group: docker
 #    - name: groupadd docker
 #      command: groupadd docker
 #      ignore_errors: True
