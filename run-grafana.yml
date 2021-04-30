@@ -5,8 +5,11 @@
 #     - name: run grafana
 #       command: docker run -d -p 3000:3000 grafana/grafana
 #       become: True
-     - name: Create a grafana container
-       docker_container:
+#     - name: Create a grafana container
+#       docker_container:
+#         name: grafana
+#         image: grafana/grafana
+     - name: CCreate a grafana container
+       community.docker.docker_container:
          name: grafana
          image: grafana/grafana
-
