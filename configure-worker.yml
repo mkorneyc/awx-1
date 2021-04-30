@@ -1,11 +1,8 @@
 - name: configure worker
   hosts: all
-  strategy: debug
+#  strategy: debug
 #  connection: ssh
   tasks:
-#     - name: set timezone to Europe/Kiev
-#       timezone:
-#         name: Europe/Kiev
      - name: Update all packages to their latest version
        become: True
        apt:
@@ -24,14 +21,6 @@
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
        become: True
-#     - name: Install docker
-#       apt:
-#         name: docker
-#         state: present
-#     - name: Install docker-compose
-#       apt:
-#         name: docker-compose
-#         state: present
      - name: Ensure group "docker" exists
        group:
          name: docker
@@ -43,23 +32,6 @@
          groups: docker
          append: yes
        become: True
-#     - name: Update usergroup settings
-#       command: newgrp docker
-#    - name: groupadd docker
-#      command: groupadd docker
-#      ignore_errors: True
-#      become: True
-#      become-method: sudo
-#      register: mymotd
-#    - name: usermod -aG docker $USER
-#      command: sudo usermod -aG docker mkorneyc
-#      command: sudo usermod -aG docker $USER
-#      command: sudo ls -la
-#      sudo: True
-#      ignore_errors: True
-#      become: True
-#      register: mymotd
-#      ignore_errors: True
       
       
 #      register: mymotd
