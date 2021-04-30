@@ -3,20 +3,24 @@
   strategy: debug
 #  connection: ssh
   tasks:
+     - name: Ensure group "docker" exists
+       group:
+         name: docker
+         state: present
 #    - name: groupadd docker
 #      command: groupadd docker
 #      ignore_errors: True
 #      become: True
 #      become-method: sudo
 #      register: mymotd
-    - name: usermod -aG docker $USER
-      command: sudo usermod -aG docker mkorneyc
+#    - name: usermod -aG docker $USER
+#      command: sudo usermod -aG docker mkorneyc
 #      command: sudo usermod -aG docker $USER
 #      command: sudo ls -la
 #      sudo: True
-      ignore_errors: True
+#      ignore_errors: True
 #      become: True
-      register: mymotd
+#      register: mymotd
 #    - name: newgrp docker
 #      command: newgrp docker
 #      ignore_errors: True
@@ -29,7 +33,7 @@
 #    - name: return motd to registered var
 #      command: cat /etc/mc/sfs.ini
 #      register: mymotd
-    - name: return value
-      debug:
-        msg: "The password is {{ mymotd }}"
+#    - name: return value
+#      debug:
+#        msg: "The password is {{ mymotd }}"
 
