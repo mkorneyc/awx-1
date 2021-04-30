@@ -1,6 +1,6 @@
 - name: configure worker
   hosts: all
-  connection: ssh
+#  connection: ssh
   tasks:
 #    - name: groupadd docker
 #      command: groupadd docker
@@ -9,10 +9,10 @@
 #      become-method: sudo
 #      register: mymotd
     - name: usermod -aG docker $USER
-      command: usermod -aG docker $USER
-      sudo: True
+      command: sudo usermod -aG docker $USER
+#      sudo: True
       ignore_errors: True
-#      become: True
+      become: True
 #      register: mymotd
     - name: newgrp docker
       command: newgrp docker
