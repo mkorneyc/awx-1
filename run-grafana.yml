@@ -9,7 +9,7 @@
 #       docker_container:
 #         name: grafana
 #         image: grafana/grafana
-     - name: CCreate a grafana container
+     - name: Create a grafana container
        community.docker.docker_container:
          name: grafana
          image: grafana/grafana
