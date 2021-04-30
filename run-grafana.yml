@@ -1,1 +1,10 @@
+  
+- name: run grafana
+  hosts: all
+#  strategy: debug
+#  connection: ssh
+  tasks:
+     - name: run grafana
+       command: docker run -d -p 3000:3000 grafana/grafana
+#       become: True
 
