@@ -4,12 +4,13 @@
     - name: groupadd docker
       command: groupadd docker
       ignore_errors: True
-      become: True
+#      become: True
+#      become-method: sudo
 #      register: mymotd
     - name: usermod -aG docker $USER
       command: usermod -aG docker $USER
       ignore_errors: True
-      become: True
+#      become: True
 #      register: mymotd
     - name: newgrp docker
       command: newgrp docker
