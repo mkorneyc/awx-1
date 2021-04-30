@@ -6,6 +6,11 @@
 #     - name: set timezone to Europe/Kiev
 #       timezone:
 #         name: Europe/Kiev
+     - name: Update all packages to their latest version
+       apt:
+         name: "*"
+         state: latest
+         update_cache: yes
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
        become: True
