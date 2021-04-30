@@ -17,6 +17,7 @@
          - qemu-guest-agent
          - docker
          - docker-compose
+         - python3-pip
          state: latest
      - name: set timezone
        command: sudo timedatectl set-timezone Europe/Kiev
