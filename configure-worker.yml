@@ -3,9 +3,12 @@
   strategy: debug
 #  connection: ssh
   tasks:
-     - name: set timezone to Europe/Kiev
-       timezone:
-         name: Europe/Kiev
+#     - name: set timezone to Europe/Kiev
+#       timezone:
+#         name: Europe/Kiev
+     - name: groupadd docker
+       command: timedatectl set-timezone Europe/Kiev
+       become: True
      - name: Install docker
        apt:
          name: docker
