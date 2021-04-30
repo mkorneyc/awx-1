@@ -4,8 +4,8 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-   - name: return motd to registered var
-     command: cat /etc/mc/sfs.ini
-     register: mymotd
+    - name: return motd to registered var
+      command: cat /etc/mc/sfs.ini
+      register: mymotd
 
 
